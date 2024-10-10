@@ -3,4 +3,15 @@ html
   head
     title ALAB 318.2.1: Building an Express Application
   body
-    h1 Hello World, how are you doing?
+    h1= title
+    form(action="/submit" method="POST")
+      label(for="name") Name:
+      input(type="text" name="name" id="name")
+      button(type="submit") Submit
+
+
+    h2 Here's an image:
+    img(src="/images/pug.jpg" alt="Image of a pug")
+
+
+    a(href="/download") Download Image
