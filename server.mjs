@@ -19,6 +19,7 @@ app.set("views", "./views");
 app.use(express.static("./images"));
 
 // Middleware
+app.use(express.json());
 app.use((req, res, next) => {
   console.log(`Request Method: ${req.method}, URL: ${req.url}`);
   next();
