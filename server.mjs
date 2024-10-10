@@ -9,15 +9,25 @@ import userRoutes from "./routes/mainRoutes.mjs";
 const app = express();
 const PORT = 3000;
 
+// Set the view engine to pug
+app.set("view engine", "pug");
+
+// Set the views directory
+app.set("views", "./views");
+
 // serve static files
-app.use(express.static("./images/pug.jpg"));
+app.use(express.static("./images"));
 
 // error handler
 app.use((err, req, res, next) => {
   res.status(400).send(err.message);
 });
 
-app.use("/", userRoutes);
+// app.use("/", userRoutes);
+
+app.get("/", (req, res) => {
+  res.render("index", { title: "Hey", message: "Hello there!" });
+});
 
 // App.listen should alwasy be the last thing in your server
 app.listen(PORT, () => {
