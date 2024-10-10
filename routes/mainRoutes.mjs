@@ -3,16 +3,13 @@ import express from "express";
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send("user get route");
+  res.render("user get route");
 });
-router.post("/post", (req, res) => {
-  res.send("user post route");
+router.post("/submit", (req, res) => {
+  res.render("user post route");
 });
-router.put("/", (req, res) => {
-  res.send("user put route");
-});
-router.delete("/", (req, res) => {
-  res.send("user delete route");
+router.get("/user/:name", (req, res) => {
+  res.render("user put route");
 });
 
 export default router;

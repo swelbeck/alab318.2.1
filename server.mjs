@@ -30,11 +30,12 @@ app.use((err, req, res, next) => {
   res.status(400).send(err.message);
 });
 
-// app.use("/", userRoutes);
+// Routes
+app.use("/", userRoutes);
 
-app.get("/", (req, res) => {
-  res.render("index", { title: "Hey", message: "Hello there!" });
-});
+// app.get("/", (req, res) => {
+//   res.render("index", { title: "Hey", message: "Hello there!" });
+// });
 
 // App.listen should alwasy be the last thing in your server
 app.listen(PORT, () => {
