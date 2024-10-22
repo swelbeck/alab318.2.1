@@ -3,5 +3,5 @@ html
   head
     title= title
   body
-    h1 Welcome, #{name}
+    h1 Welcome, #{name || 'Guest' }
     a(href="/") Back to Home

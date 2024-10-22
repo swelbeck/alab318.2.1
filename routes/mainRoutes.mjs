@@ -10,6 +10,7 @@ router.post("/submit", (req, res) => {
   console.log(formData)
   res.render("success", { title: "Form Submitted", data: formData });
 });
+
 router.get("/user/:name", (req, res) => {
   res.render("user", {
     title: `Hello, ${req.params.name}`,

@@ -4,5 +4,5 @@ html
     title= title
   body
     h1= title
-    p You submitted: #{data.name}
+    p You submitted: #{data.name || 'Unknown'}
     a(href="/") Back to Home
