@@ -4,14 +4,18 @@ html
     title ALAB 318.2.1: Building an Express Application
   body
     h1= title
+
+    h2 Here's an image:
+    img(src="/pug.jpg" alt="Image of a pug")
+
     form(action="/submit" method="POST")
       label(for="name") Name:
       input(type="text" name="name" id="name")
       button(type="submit") Submit
-
-
-    h2 Here's an image:
-    img(src="/images/pug.jpg" alt="Image of a pug")
-
+    
+    
+    nav
+      ul
+        li: a(href="/user/Sandra") Go to User Page
 
     a(href="/download") Download Image
