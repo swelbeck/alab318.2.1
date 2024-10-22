@@ -6,7 +6,9 @@ router.get("/", (req, res) => {
   res.render("index", { title: "Home Page" });
 });
 router.post("/submit", (req, res) => {
-  res.render("success", { title: "Form Submitted", data: req.body });
+  const formData = req.body;
+  console.log(formData)
+  res.render("success", { title: "Form Submitted", data: formData });
 });
 router.get("/user/:name", (req, res) => {
   res.render("user", {
